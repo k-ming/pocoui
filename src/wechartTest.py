@@ -18,16 +18,55 @@ poco = AndroidUiautomationPoco()
 screenWidth,screenHeigth = poco.get_screen_size()
 poco.device.wake()
 start_app("com.tencent.mm")
-time.sleep(10)
-# poco("com.tencent.mm:id/f4u").click()
-poco("com.tencent.mm:id/l4").sibling("android.widget.LinearLayout").offspring("android.widget.RelativeLayout")[0].child("com.tencent.mm:id/f4u").click()
+poco("com.tencent.mm:id/f4u").wait_for_appearance(15)
+poco("com.tencent.mm:id/f4u").click()
+poco("com.tencent.mm:id/bfl").wait_for_appearance(15)
 poco("com.tencent.mm:id/bfl").click()
 text('weixinyundong')
 poco("com.tencent.mm:id/f5h").offspring("com.tencent.mm:id/f50")[1].click()
 poco("com.tencent.mm:id/aks").click()
+def getZan():
+    return poco("com.tencent.mm:id/bn2").offspring("com.tencent.mm:id/bm7")
+for i in range(1, len(getZan())-1):
+    getZan()[i].click()
+time.sleep(2)
 
-swipe((screenWidth*0.5, screenHeigth*0.9), vector=[0, -0.8], duration=2.5)
-time.sleep(3)
-swipe((screenWidth*0.5, screenHeigth*0.9), vector=[0, -0.8], duration=2.5)
-time.sleep(3)
-swipe((screenWidth*0.5, screenHeigth*0.9), vector=[0, -0.8], duration=2.5)
+swipe((screenWidth*0.5, screenHeigth*0.9), vector=[0, -0.85], duration=3)
+for i in range(0, len(getZan())-1):
+    getZan()[i].click()
+time.sleep(2)
+
+swipe((screenWidth*0.5, screenHeigth*0.9), vector=[0, -0.85], duration=3)
+for i in range(0, len(getZan())-1):
+    getZan()[i].click()
+time.sleep(2)
+
+swipe((screenWidth*0.5, screenHeigth*0.9), vector=[0, -0.85], duration=3)
+for i in range(0, len(getZan())-1):
+    getZan()[i].click()
+time.sleep(2)
+
+swipe((screenWidth*0.5, screenHeigth*0.9), vector=[0, -0.85], duration=3)
+for i in range(0, len(getZan())-1):
+    getZan()[i].click()
+time.sleep(2)
+
+swipe((screenWidth*0.5, screenHeigth*0.9), vector=[0, -0.85], duration=3)
+for i in range(0, len(getZan())-1):
+    getZan()[i].click()
+time.sleep(2)
+
+swipe((screenWidth*0.5, screenHeigth*0.9), vector=[0, -0.85], duration=3)
+for i in range(0, len(getZan())-1):
+    getZan()[i].click()
+time.sleep(2)
+
+swipe((screenWidth*0.5, screenHeigth*0.9), vector=[0, -0.85], duration=3)
+for i in range(0, len(getZan())-1):
+    getZan()[i].click()
+time.sleep(2)
+
+swipe((screenWidth*0.5, screenHeigth*0.9), vector=[0, -0.85], duration=3)
+for i in range(0, len(getZan())-1):
+    getZan()[i].click()
+time.sleep(2)
